@@ -1,60 +1,36 @@
 ﻿/* Write a program that reverses the words in given sentence.
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 class ReverseSentence
 {
     static void Main()
     {
         Console.Write("Enter a sentence: ");
-        string input2 = Console.ReadLine();
+        string input = Console.ReadLine();
 
-        Reverse(input2);
+        string[] inputToArr = input.Split(' ');
+        string[] inputToArrWithoutPunct = input.Split(new char[] { ' ', ',', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
 
-        string[] input = input2.Split(new char[] { ' ', ',', '.' }, StringSplitOptions.RemoveEmptyEntries);
-        Array.Reverse(input);
-        Console.WriteLine(string.Join(" ", input));
-        char[] punc = ".,?!".ToCharArray();
-        //string str = Console.ReadLine();
-        string str = "hi, dani!";
-        string strrev = "";
+        Array.Reverse(inputToArrWithoutPunct);
 
-        foreach (var word in str.Split(' '))
+        string firstWord = String.Empty;
+        string secondWord = String.Empty;
+
+        for (int i = 0; i < inputToArr.Length; i++)
         {
-            string temp = "";
-            foreach (var ch in word.ToCharArray())
-            {
-                if (Array.IndexOf(punc, ch) == -1)
-                    temp = temp+ch;
-                else
-                    temp = ch+temp;
+            if (String.Equals(inputToArr[i], inputToArrWithoutPunct[inputToArr.Length - i - 1])) //both words don't have punct.
+            { 
+                Console.Write(inputToArrWithoutPunct[i] + " ");
             }
-            strrev = strrev + temp + " ";
+            else
+            {
+                firstWord = inputToArrWithoutPunct[inputToArr.Length - i - 1];
+                secondWord = inputToArr[i];
+                Console.Write(inputToArrWithoutPunct[i] + secondWord.Replace(firstWord, "") + " ");
+            }
         }
-        Console.WriteLine(strrev);
-        Console.ReadLine();
-    }
-
-    static string Reverse(string input2)
-    {
-        string[] input = input2.Split(' ');
-        List<char> punctuation = new List<char>();
-        StringBuilder reverse = new StringBuilder();
-        //foreach (Match str in Regex.Matches(inputString, inputSubString))
-        //{
-
-        //}
-
-        for (int i = 0; i < input.Length; i++)
-        {
-
-        }
-
-        return reverse.ToString();
+        Console.WriteLine();
     }
 }
-

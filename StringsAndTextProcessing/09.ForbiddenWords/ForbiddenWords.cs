@@ -3,7 +3,7 @@ Write a program that replaces the forbidden words with asterisks.
  */
 
 using System;
-using System.Text.RegularExpressions;
+//using System.Text.RegularExpressions;
 
 class SubString
 {

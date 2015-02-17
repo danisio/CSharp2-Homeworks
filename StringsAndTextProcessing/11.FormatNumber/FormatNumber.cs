@@ -10,10 +10,10 @@ class FormatNumber
         Console.Write("Enter a number: ");
         long number = long.Parse(Console.ReadLine());
 
-        Console.WriteLine("{1,15:D}-->{0}", "Decimal number", number);
-        Console.WriteLine("{1,15:X}-->{0}", "Hexadecimal number", number);
-        Console.WriteLine("{1,15:P}-->{0}", "Percentage", number);
-        Console.WriteLine("{1,15:E}-->{0}", "Scientific notation", number); 
+        Console.WriteLine("{1,15:D} --> {0}", "Decimal number", number);
+        Console.WriteLine("{1,15:X} --> {0}", "Hexadecimal number", number);
+        Console.WriteLine("{1,15:P} --> {0}", "Percentage", number);
+        Console.WriteLine("{1,15:E} --> {0}", "Scientific notation", number); 
     }
 }
 

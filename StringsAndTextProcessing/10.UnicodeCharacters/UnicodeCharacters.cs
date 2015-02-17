@@ -8,7 +8,7 @@ class UnicodeCharacters
 {
     static void Main()
     {
-        Console.Write("Enter text");
+        Console.Write("Enter text: ");
         string input = Console.ReadLine();
 
         StringBuilder result = new StringBuilder();
@@ -21,7 +21,6 @@ class UnicodeCharacters
         }
 
         Console.WriteLine(result);
-
     }
 }
 

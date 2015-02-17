@@ -6,7 +6,6 @@ The expected result: We are living in a YELLOW SUBMARINE. We don't have ANYTHING
 
 using System;
 using System.Text;
-//using System.Text.RegularExpressions;
 
 class ParseTags
 {

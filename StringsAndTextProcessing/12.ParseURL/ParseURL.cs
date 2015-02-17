@@ -34,6 +34,5 @@ class ParseURL
         {
             Console.WriteLine(ex2.Message);
         }
-
     }
 }

@@ -3,7 +3,6 @@ Example of correct expression: ((a+b)/5-d). Example of incorrect expression: )(a
  */
 
 using System;
-using System.IO;
 
 class CorrectBrackects
 {

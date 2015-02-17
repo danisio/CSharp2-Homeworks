@@ -10,7 +10,8 @@ class WordsCount
         Console.WriteLine("Enter text: ");
         string input = Console.ReadLine().ToLower();
 
-        string[] inputToArray = input.Split(new char[] { ' ', ',', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] inputToArray = input.Split(new char[] { ' ', ',', '.', '!', '?', ';' }, StringSplitOptions.RemoveEmptyEntries);
+       
         SortedDictionary<string, int> result = new SortedDictionary<string, int>();
 
         foreach (var word in inputToArray)
@@ -27,7 +28,7 @@ class WordsCount
 
         foreach (var word in result)
         {
-            Console.WriteLine("word {0} --> {1} times", word.Key.ToUpper(), word.Value);
+            Console.WriteLine("word {0, -15} --> {1} times", word.Key.ToUpper(), word.Value);
         }
     }
 }

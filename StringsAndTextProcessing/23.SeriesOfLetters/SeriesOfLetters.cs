@@ -31,7 +31,7 @@ class SeriesOfLetters
                 result.Append(input[i]);
             }
         }
+
         return result.ToString();
     }
-
 }

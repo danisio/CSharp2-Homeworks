@@ -19,7 +19,7 @@ class LettersCount
                 result[letter] += 1;
 
             }
-            else if ('A' <= letter && letter <= 'z')
+            else if ('a' <= letter && letter <= 'z')
             {
                 result[letter] = 1;
             }

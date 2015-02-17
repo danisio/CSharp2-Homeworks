@@ -16,6 +16,9 @@ class SubString
         Console.Write("Enter substring: ");
         string inputSubString = Console.ReadLine();
 
+        inputString = inputString.ToLower();
+        inputSubString = inputSubString.ToLower();
+
         Console.WriteLine("The result = {0}", CountSubStrings(inputString, inputSubString));
     }
 
@@ -23,7 +26,9 @@ class SubString
     {
         int counter = 0;
         foreach (Match str in Regex.Matches(inputString, inputSubString))
+        {
             counter++;
+        }
 
         return counter;
     }

@@ -17,16 +17,16 @@ class EncodeDecode
         string encoded = Encode_Decode(inputString, cipher);
         string decoded = Encode_Decode(encoded, cipher);
 
-        Console.WriteLine(encoded + Environment.NewLine + decoded);
+        Console.WriteLine("Encoded: {0}" + Environment.NewLine + "Decoded: {1}", encoded, decoded);
     }
 
     static string Encode_Decode(string input, string cipher)
     {
         StringBuilder encoded = new StringBuilder();
-       
+
         int firstInputLetter;
         int firstCipherLetter;
-        
+
         for (int i = 0; i < input.Length; i++)
         {
             firstInputLetter = input[i];
