@@ -13,25 +13,25 @@ class ExtractTextFromHTML
 
         bool insideTags = false;
 
-        StringBuilder my = new StringBuilder(input.Length);
+        StringBuilder result = new StringBuilder(input.Length);
 
-        my.Append(input);
-        my.Replace("<title>", "Title: ");
-        my.Replace("<body>", "\nBody: ");
+        result.Append(input);
+        result.Replace("<title>", "Title: ");
+        result.Replace("<body>", "\nBody: ");
 
-        for (int i = 0; i < my.Capacity; i++)
+        for (int i = 0; i < result.Capacity; i++)
         {
-            if (my[i] == '<')
+            if (result[i] == '<')
             {
                 insideTags = true;
             }
-            else if (my[i] == '>' && insideTags == true)
+            else if (result[i] == '>' && insideTags == true)
             {
                 insideTags = false;
             }
             else if (insideTags == false)
             {
-                Console.Write(my[i]);
+                Console.Write(result[i]);
             }
         }
         Console.WriteLine();
